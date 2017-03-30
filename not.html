@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/favicon.ico">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/lib/jquery.js"></script>
+	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.css" >
+
+
+<!-- Font Awesome -->
+<link href="css/font-awesome.css" rel="stylesheet"/>
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/lib/bootstrap.js"></script>
+<script src="Notification.js"></script>
+<!--
+<link href='https://fonts.googleapis.com/css?family=Amiko:600' rel='stylesheet' type='text/css'>
+-->
+
+</head>
+<body>
+	
+	
+	
+<script>
+var $notification=new Notification();
+var index=0;
+var not1=$notification.notify({
+    title:"Title 1",
+    message:"Message "+index,
+    background:'#ddd',
+    textColor:'#555',
+    html:'<span>Boo</span>',
+    timeOut:-1,
+    progressBar:{
+      //background:'#000',
+      forground:'#1abc9c',
+      progress:30
+    }
+  });
+setTimeout(function(){
+  not1.close();
+},1000);
+/*
+setInterval(function(){
+  index++;
+  
+   not1.update({
+    message:" Message "+index,
+    progressBar:{
+      forground:'#fff',
+      progress:index
+    }
+    //html:'<div style="width:'+index+'%;height:5px;background:red;"></div>'
+   });
+
+
+//console.log(not1);
+},1000);
+*/
+  
+</script>
+</body>
+</html>
